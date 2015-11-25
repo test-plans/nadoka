@@ -17,7 +17,7 @@ matrix:
     - rvm: 2.0.0
     - rvm: 2.1
   include:
-    - rvm:1.9.3
+    - rvm: 1.9.3
       env:
         - foo=bar
         - bar=foo
