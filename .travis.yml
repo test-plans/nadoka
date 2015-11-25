@@ -1,8 +1,8 @@
 language: ruby
 rvm:
   #- 2.2
-  #- 2.1
-  #- 2.0.0
+  - 2.1
+  - 2.0.0
   - 1.9.3
   - jruby-18mode # JRuby in 1.8 mode
   - jruby-19mode # JRuby in 1.9 mode
@@ -11,10 +11,9 @@ matrix:
   allow_failures:
     - rvm: jruby-18mode
     - rvm: jruby-19mode
-   # - rvm: rbx-18mode
-    #- rvm: rbx-19mode
-    #- rvm: ruby-head
-    #- rvm: jruby-head
     - rvm: ree
+  exclude:
+    - rvm: 2.0.0
+    - rvm: 2.1
 script: ruby check-syntax.rb
 
